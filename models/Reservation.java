@@ -5,6 +5,7 @@ import java.util.Date;
 public class Reservation {
 
     private static int counter = 1000;
+
     private int id;
 
     private Table table;
@@ -35,5 +36,15 @@ public class Reservation {
     public Table getTable() {
         return table;
     }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
 
 }

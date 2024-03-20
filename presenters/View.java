@@ -1,6 +1,7 @@
 package presenters;
 
 import java.util.Collection;
+import java.util.Date;
 
 import models.Table;
 
@@ -12,4 +13,6 @@ public interface View {
 
     void showReservationTableResult(int reservationNo);
 
+    void showAllReservations(Collection<Table> tables);
+    
 }

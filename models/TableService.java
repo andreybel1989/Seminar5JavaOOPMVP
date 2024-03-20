@@ -36,5 +36,38 @@ public class TableService implements Model {
         }
         throw new RuntimeException("Некорректный номер столика");
     }
-}
 
+    @Override
+    public int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name) {
+        // for (Table table : tables) {
+        // for (Reservation reservation : table.getReservations()) {
+        // if (reservation.getId() == oldReservation) {
+        // reservation.setDate(reservationDate);
+        // reservation.setName(name);
+        // return reservation.getId();
+        // }
+        // }
+        // }
+        // throw new RuntimeException("Бронирование с номером " + oldReservation + " не
+        // найдено");
+        // }
+
+        boolean reservationExists = false;
+        for (Table table : tables) {
+            for (Reservation reservation : table.getReservations()) {
+                if (reservation.getId() == oldReservation) {
+                    table.getReservations().remove(reservation);
+                    reservationExists = true;
+                    break;
+                }
+            }
+            if (reservationExists) {
+                break;
+            }
+        }
+        if (!reservationExists) {
+            throw new RuntimeException("Бронирование с номером " + oldReservation + " ненайдено");
+        }
+        return reservationTable(reservationDate, tableNo, name);
+    }
+}
