@@ -21,6 +21,8 @@ public class Program {
         view.reservationTable(new Date(), 2, "Станислав");
         view.changeReservationTable(1001, new Date(), 4, "Станислав");
         System.out.println("hello world");
+        
+
     }
 
 }
