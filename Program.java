@@ -20,8 +20,7 @@ public class Program {
         presenter.updateTablesView();
         view.reservationTable(new Date(), 2, "Станислав");
         view.changeReservationTable(1001, new Date(), 4, "Станислав");
-        System.out.println("hello world");
-        System.out.println("hello world");
+        
     }
 
 }
