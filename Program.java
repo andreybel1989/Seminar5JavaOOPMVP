@@ -18,9 +18,16 @@ public class Program {
         BookingView view = new BookingView();
         BookingPresenter presenter = new BookingPresenter(model, view);
         presenter.updateTablesView();
-        view.reservationTable(new Date(), 2, "Станислав");
-        view.changeReservationTable(1001, new Date(), 4, "Станислав");
-        
+        view.reservationTable(new Date(), 1, "Олег");
+        view.reservationTable(new Date(), 2, "Дмитрий");
+        view.reservationTable(new Date(), 3, "Иван");
+        view.reservationTable(new Date(), 4, "Оля");
+        view.reservationTable(new Date(), 4, "Михаил");
+
+        view.changeReservationTable(1002, new Date(), 3, "Станислав");
+        view.changeReservationTable(1003, new Date(), 1, "Ирина");
+        System.out.println();
+        view.showAllReservations(model.loadTables());
     }
 
 }

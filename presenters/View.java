@@ -2,6 +2,7 @@ package presenters;
 
 import java.util.Collection;
 
+
 import models.Table;
 
 public interface View {
@@ -12,4 +13,6 @@ public interface View {
 
     void showReservationTableResult(int reservationNo);
 
+    void showAllReservations(Collection<Table> tables);
+    
 }
